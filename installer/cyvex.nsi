@@ -27,7 +27,7 @@ BrandingText "CYVEX ${VER}"
 Section "Install"
   nsExec::Exec 'taskkill /F /IM CYVEX.exe'
   SetOutPath "$INSTDIR"
-  File /r "..\dist\CYVEX\*.*"
+  File /r /x data "..\dist\CYVEX\*.*"
   WriteUninstaller "$INSTDIR\Uninstall.exe"
   CreateShortcut "$DESKTOP\CYVEX.lnk" "$INSTDIR\CYVEX.exe" "" "$INSTDIR\CYVEX.exe" 0
   CreateShortcut "$SMPROGRAMS\CYVEX.lnk" "$INSTDIR\CYVEX.exe" "" "$INSTDIR\CYVEX.exe" 0

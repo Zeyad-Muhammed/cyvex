@@ -337,7 +337,7 @@ button { font-family: inherit; cursor: pointer; }
   background: radial-gradient(circle at 50% 42%, rgba(59, 130, 246, 0.10), transparent 62%);
   border: 1px dashed rgba(59, 130, 246, 0.14);
 }
-.gauge svg { transform: rotate(-90deg); position: relative; }
+.gauge > svg { transform: rotate(-90deg); position: relative; }
 .gauge .ring-bg { stroke: var(--surface-3); }
 .gauge .ring-fg {
   stroke: var(--brand); transition: stroke-dashoffset .6s cubic-bezier(.22,.61,.36,1), stroke .3s;
@@ -346,9 +346,10 @@ button { font-family: inherit; cursor: pointer; }
 .gauge.safe .ring-fg { stroke: url(#gaugeGrad); }
 .gauge.warning .ring-fg { stroke: var(--warning); filter: drop-shadow(0 0 7px rgba(242, 169, 59, .5)); }
 .gauge.danger .ring-fg { stroke: var(--danger); filter: drop-shadow(0 0 7px rgba(239, 85, 99, .5)); }
-.gauge-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; }
-.gauge-icon { width: 46px; height: 46px; filter: drop-shadow(0 0 10px var(--brand-glow)); }
-.gauge-status { font-size: 15.5px; font-weight: 800; letter-spacing: .3px; }
+.gauge-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; padding: 0 36px; }
+.gauge-icon svg { width: 100%; height: 100%; }
+.gauge-icon { width: 46px; height: 46px; display: block; filter: drop-shadow(0 0 10px var(--brand-glow)); }
+.gauge-status { font-size: 15px; font-weight: 800; letter-spacing: .2px; line-height: 1.25; }
 .gauge-meta { font-size: 12px; color: var(--text-muted); }
 
 /* stat cards */

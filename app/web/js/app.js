@@ -14,6 +14,7 @@
     settings: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2L14 3h-4l-.4 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 5 12c0 .4 0 .8.1 1.2l-2 1.6 2 3.4 2.4-1c.6.5 1.3.9 2 1.2L10 21h4l.4-2.6c.7-.3 1.4-.7 2-1.2l2.4 1 2-3.4-2-1.6c.1-.4.1-.8.1-1.2Z"/></svg>',
     check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>',
     alert: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 9.5v4.5M12 17.2v.1"/></svg>',
+    shieldCheck: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.2 3 7.8 7.5 9 4.5-1.2 7.5-4.8 7.5-9V6L12 3Z"/><path d="m8.8 12 2.4 2.4 4-4.6"/></svg>',
     shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.2 3 7.8 7.5 9 4.5-1.2 7.5-4.8 7.5-9V6L12 3Z"/></svg>',
     trash: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg>',
     restore: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.3-5.6L4 8"/><path d="M4 4v4h4"/></svg>',
@@ -437,7 +438,7 @@
           stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}"/>
       </svg>
       <div class="gauge-center">
-        <span class="gauge-icon" id="gauge-icon" style="color:var(--${risk === "safe" ? "brand" : risk === "warning" ? "warning" : "danger"})">${risk === "safe" ? I.shield : I.alert}</span>
+        <span class="gauge-icon" id="gauge-icon" style="color:var(--${risk === "safe" ? "brand" : risk === "warning" ? "warning" : "danger"})">${risk === "safe" ? I.shieldCheck : I.alert}</span>
         <span class="gauge-status" id="gauge-status">${esc(label)}</span>
         <span class="gauge-meta" id="gauge-meta">${esc(sub)}</span>
       </div>

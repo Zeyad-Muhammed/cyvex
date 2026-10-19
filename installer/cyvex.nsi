@@ -1,7 +1,7 @@
 ; CYVEX installer. Build: makensis installer\cyvex.nsi  (after build.py)
 Unicode true
 !define APP "CYVEX"
-!define VER "1.0.0"
+!define VER "1.0.1"
 !define UNKEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\CYVEX"
 
 Name "${APP}"

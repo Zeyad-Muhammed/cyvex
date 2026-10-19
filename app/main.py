@@ -50,7 +50,7 @@ def main() -> None:
                 if not scan_target:
                     winutil.message_box(f"{APP_NAME} {APP_VERSION}",
                                         f"{APP_NAME} is already running.")
-            return
+            os._exit(0)  # no lingering threads: exit hard
 
     api = Api()
     api.initial_scan = scan_target
@@ -102,6 +102,7 @@ def main() -> None:
     window.events.loaded += on_loaded
     window.events.closing += on_closing
     webview.start(debug=bool(os.environ.get("CYVEX_DEBUG")))
+    os._exit(0)  # window closed: drop tray/worker threads so the next launch is clean
 
 
 if __name__ == "__main__":

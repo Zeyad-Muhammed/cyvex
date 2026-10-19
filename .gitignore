@@ -5,3 +5,5 @@ data/
 __pycache__/
 *.pyc
 *.spec
+CYVEX.exe
+_internal/

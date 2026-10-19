@@ -1,0 +1,4 @@
+pywebview==6.2.1
+watchdog==6.0.0
+requests==2.34.2
+pystray==0.19.5

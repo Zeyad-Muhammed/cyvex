@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "updated": "2026-01-01T00:00:00+00:00",
+  "note": "Bundled seed signatures. The EICAR entry is the official, harmless industry test file used to validate anti-malware engines. Import additional packs from Settings > Signatures.",
+  "signatures": [
+    {
+      "hash": "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f",
+      "name": "EICAR-Test-File",
+      "severity": "medium",
+      "source": "eicar"
+    }
+  ]
+}

@@ -903,9 +903,7 @@
           <div class="list">
             ${toggleRow("reduce_motion", "set.reduceMotion", "set.reduceMotionDesc", s.reduce_motion)}
             ${toggleRow("high_contrast", "set.highContrast", "set.highContrastDesc", s.high_contrast)}
-            ${toggleRow("frameless_window", "set.frameless", "set.framelessDesc", s.frameless_window)}
           </div>
-          <div class="hint" style="margin-top:10px">${t("set.framelessNote")}</div>
         </div>
 
         <div class="card">
@@ -1403,7 +1401,7 @@
       applySidebar();
       state.dashboard = data.dashboard;
 
-      if (state.settings.frameless_window) {
+      {
         document.body.classList.add("frameless");
         const tb = $("#titlebar"); if (tb) tb.hidden = false;
       }

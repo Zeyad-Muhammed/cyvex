@@ -15,7 +15,7 @@ DEFAULTS: dict[str, Any] = {
     "reduce_motion": False,
     "high_contrast": False,
     "sidebar_collapsed": False,
-    "frameless_window": False,
+    "frameless_window": True,
     # protection modules
     "realtime_enabled": True,
     "ransomware_enabled": False,

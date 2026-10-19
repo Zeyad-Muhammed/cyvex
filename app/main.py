@@ -55,7 +55,7 @@ def main() -> None:
     api = Api()
     api.initial_scan = scan_target
     index = paths.web_dir() / "index.html"
-    frameless = bool(api.settings.get("frameless_window", False))
+    frameless = True  # CYVEX draws its own title bar and window controls
 
     window = webview.create_window(
         f"{APP_NAME} {APP_VERSION}",

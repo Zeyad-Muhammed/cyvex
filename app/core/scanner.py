@@ -287,7 +287,9 @@ class ScanEngine:
         all_names = ", ".join(sorted({f["name"] for f in findings}))
 
         action = "detected"
-        if self._settings.get("auto_quarantine", True):
+        # a "low" finding (e.g. an executable in Temp) is reported, never auto-quarantined:
+        # installers and apps legitimately unpack there and would be broken otherwise
+        if self._settings.get("auto_quarantine", True) and primary["severity"] != "low":
             result = self._quarantine.quarantine_file(
                 path, all_names, primary["engine"], primary["severity"], digest
             )

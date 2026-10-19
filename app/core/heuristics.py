@@ -94,7 +94,7 @@ def analyze(path: str, head: bytes, size: int = 0) -> list[dict[str, Any]]:
     if risky_dir and ext in RISKY_EXTENSIONS:
         findings.append({
             "name": "Heur:RiskyLocation",
-            "severity": "medium",
+            "severity": "low",
             "detail": "Executable/script running from a high-risk folder",
         })
 

@@ -1,4 +1,4 @@
 """CYVEX - application package."""
 
 APP_NAME = "CYVEX"
-APP_VERSION = "1.0.1"
+APP_VERSION = "1.0.2"
